@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./Home.css"
+import { FaSearch } from "react-icons/fa";
 
 function Home() {
     const [user, setUser] = useState("")
@@ -21,31 +23,48 @@ function Home() {
             setError(err.message)
             setData(null)
         }
-        
+
     }
 
     return <>
         <main>
-            <input type="text"
-                className="search-user"
-                placeholder="Enter the username"
-                value={user}
-                onChange={(e) => (setUser(e.target.value))}
-            />
+            <h1 className="maintext">Explore Github Profiles.</h1>
+            <p className="below-text">Discover developers and their work.</p>
+            <div className="main">
+                <input type="text"
+                    className="search-user"
+                    placeholder="Enter the username..."
+                    value={user}
+                    onChange={(e) => (setUser(e.target.value))}
+                />
 
-            <button onClick={searchUser}>Search</button>
+                <button onClick={searchUser}><span><FaSearch /></span></button>
+
+            </div>
+
 
             {data && (
                 <div className="card">
                     <div className="each-card" key={data.id}>
-                        <h1>{data.login}</h1>
+                        <img src={data.avatar_url} alt="avatar" />
+                        <h1>{data.name}</h1>
+                        <h2>{data.login}</h2>
+                        <p>{data.bio}</p>
+                        <p>{data.location}</p>
+                        <div className="info">
+                            <h4>#Following: {data.following}</h4>
+                            <h4>#Followers: {data.followers}</h4>
+                            <h4>#Repos: {data.public_repos}</h4>
+                        </div>
+                        <a href={data.html_url}>
+                            View Profile
+                        </a>
                     </div>
                 </div>
 
             )}
+            {error && <h1>{error}</h1>}
 
-           {error && <h1>{error}</h1>}
-           
 
         </main>
 
