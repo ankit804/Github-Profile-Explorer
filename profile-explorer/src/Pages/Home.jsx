@@ -56,9 +56,7 @@ function Home() {
                             <h4>#Followers: {data.followers}</h4>
                             <h4>#Repos: {data.public_repos}</h4>
                         </div>
-                        <a href={data.html_url}>
-                            View Profile
-                        </a>
+                        <a href={`/profile/${user}`}>View Profile</a>
                     </div>
                 </div>
 

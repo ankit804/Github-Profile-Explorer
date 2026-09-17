@@ -15,8 +15,8 @@
 
 .main{
     width: 450px;
-    height: 50px;
-    margin: 70px auto;
+    height: 70px;
+    margin: 50px auto;
     box-shadow: 0 0 10px rgba(0,0, 0,0.2);
     padding: 10px;
     border-radius: 5px;
@@ -48,10 +48,10 @@
 
 .card{
     width: 500px;
-    height: 500px;
+    height: 520px;
     box-shadow: 0 0 20px rgba(61, 5, 5, 0.3);
-    background-color: blueviolet;
-    margin: 100px auto;
+    background-color: rgb(44, 12, 74);
+    margin: 50px auto;
     border-radius: 10px;
     padding: 20px;
     color: white;
@@ -80,7 +80,7 @@
 .card .info{
     display: flex;
      gap: 20px;
-     margin: 60px;
+     margin: 50px;
     
 }
 
