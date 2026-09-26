@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import "./Profile.css"
 function Profile() {
     const [data, setData] = useState(null);
     const [error, setError] = useState("");
@@ -38,9 +38,13 @@ function Profile() {
                 <h2>{data.name}</h2>
                 <p>@{data.login}</p>
                 <p>{data.bio}</p>
-                <p>Followers: {data.followers}</p>
+                <div className="info">
+                    <p>Followers: {data.followers}</p>
                 <p>Following: {data.following}</p>
                 <p>Repositories: {data.public_repos}</p>
+                </div>
+                
+                <a href={`https://github.com/${username}`}>Github</a>
             </div>
         </>
     );
