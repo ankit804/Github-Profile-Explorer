@@ -33,7 +33,7 @@ function Profile() {
         <>
             <h1 className="main-text">View Profile</h1>
 
-            <div className="each-card">
+            <div className="card"  key={data.id}>
                 <img src={data.avatar_url} alt={data.login} />
                 <h2>{data.name}</h2>
                 <p>@{data.login}</p>

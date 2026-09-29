@@ -4,9 +4,9 @@ import logo from "../assets/logo.png"
 
 function Navbar() {
     const navinfo = [
-        { href: "/", label: "Home" },
-        { href: "/about", label: "About" },
-        { href: "/github", label: "Github" }
+        { href: "/", label: "Home", id: 1 },
+        { href: "/about", label: "About", id: 2 },
+        { href: "/github", label: "Github", id: 3 }
     ]
     return <>
         <nav className="navbar">
@@ -15,10 +15,10 @@ function Navbar() {
             </div>
             <div className="navlinks">
                 {navinfo.map((item) => (
-                        <div className="links">
-                            <a href={item.href}>{item.label}</a>
-                        </div>
-                    ))}
+                    <div className="links" key={item.id}>
+                        <a href={item.href}>{item.label}</a>
+                    </div>
+                ))}
             </div>
         </nav>
     </>

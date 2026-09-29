@@ -1,5 +1,5 @@
 import Home from "../Pages/Home/Home";
-import Profile from "../Pages/Profile";
+import Profile from "../Pages/Profile/Profile";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function Router() {

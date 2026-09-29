@@ -49,13 +49,7 @@ function Home() {
                         <img src={data.avatar_url} alt="avatar" />
                         <h1>{data.name}</h1>
                         <h2>{data.login}</h2>
-                        <p>{data.bio}</p>
-                        <p>{data.location}</p>
-                        <div className="info">
-                            <h4>#Following: {data.following}</h4>
-                            <h4>#Followers: {data.followers}</h4>
-                            <h4>#Repos: {data.public_repos}</h4>
-                        </div>
+                        
                         <a href={`/profile/${user}`}>View Profile</a>
                     </div>
                 </div>
