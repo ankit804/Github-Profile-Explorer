@@ -23,13 +23,14 @@
 }
 
 .main input{
-    width: 80%;
+    width: 75%;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid gray;
     text-align: center;
-    margin-left: 30px;
+    margin-left: 20px;
 }
+
 
 .main span{
     color: gray;
@@ -48,7 +49,7 @@
 
 .each-card{
     width: 500px;
-    height: 300px;
+    min-height: 300px;
     box-shadow: 0 0 20px rgba(61, 5, 5, 0.3);
     background-color: rgb(44, 12, 74);
     margin: 50px auto;
@@ -76,14 +77,20 @@
 
 .each-card a{
     text-decoration: none;
+    display: inline-block;
     color: green;
     padding: 10px 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px green;
+;
     background-color: aliceblue;
     
 }
 
 .each-card a:hover{
     background-color: gray;
+}
+
+.each-card p{
+    margin: 0 0 25px;
 }

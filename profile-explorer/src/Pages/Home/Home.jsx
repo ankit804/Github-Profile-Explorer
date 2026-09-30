@@ -44,16 +44,13 @@ function Home() {
 
 
             {data && (
-                <div className="card">
-                    <div className="each-card" key={data.id}>
-                        <img src={data.avatar_url} alt="avatar" />
-                        <h1>{data.name}</h1>
-                        <h2>{data.login}</h2>
-                        
-                        <a href={`/profile/${user}`}>View Profile</a>
-                    </div>
-                </div>
+                <div className="each-card" key={data.id}>
+                    <img src={data.avatar_url} alt="avatar" />
+                    <h1>{data.name}</h1>
+                    <h2>{data.login}</h2>
 
+                    <a href={`/profile/${user}`}>View Profile</a>
+                </div>
             )}
             {error && <h1>{error}</h1>}
 
